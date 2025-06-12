@@ -1,0 +1,249 @@
+ /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, lightblue, #fda085);
+  color: #130000;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-bottom: 50px; /* for toggle button */
+  min-height: 100vh;
+}
+
+/* Container max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 5px solid white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.profile-picture img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto;
+}
+
+.profile-picture p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+#education a{
+  color: orange;
+  text-decoration: none;
+}
+#contact a{
+  color: orange;
+  text-decoration: none;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #222;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Contact Form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto 0;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-family: inherit;
+  resize: vertical;
+}
+
+#contact-form button {
+  padding: 12px;
+  background-color: #0077ff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #005fcc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+/* Toggle button */
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #555;
+}
+
+/* Skills section fix *
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .profile-picture img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #eee;
+}
+
+body.dark header,
+body.dark section {
+  background: rgba(40, 40, 40, 0.85);
+  color: #f0f0f0;
+}
+
+body.dark nav {
+  background: rgba(20, 20, 20, 0.9);
+}
+body.dark h2 {
+  color: white;
+}
+
+
+body.dark nav ul li a {
+  color: #fff;
+}
+
+body.dark nav ul li a:hover {
+  background-color: #666;
+}
+
+body.dark footer {
+  background: rgba(30, 30, 30, 0.9);
+  color: #ddd;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background-color: #2b2b2b;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark .contact-form button {
+  background-color: #00838f;
+}
+
+body.dark .contact-form button:hover {
+  background-color: #005963;
+}

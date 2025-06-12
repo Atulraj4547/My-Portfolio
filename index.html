@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+</head>
+<body>
+  <header>
+  <h1>Atul Raj</h1>
+  <div class="profile-picture">
+    <img src="/public/profile.jpeg" alt="Atul Raj" />
+    <p>Frontend Web Developer</p>
+  </div>
+
+
+</header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+        
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate web developer with experience in building websites using HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <section id="education" style="text-align: center;">
+  <h2>Education</h2>
+  <img src="/public/logo.jpeg" alt="MUIT Logo" style="width: 120px; height: auto; margin-bottom: 10px;" />
+  <p><li><strong>B.Tech in Computer Science</strong> - Maharishi University of Information Technology (2022 - 2026)</p></li>
+    <li> <strong>Location:</strong> Sitapur Road, P.O-Maharishi Vidya Mandir, Lucknow-226013 (UP), India</li>
+    <li><strong>Affiliated with:</strong> University Grants Commission (UGC), AICTE approved</li>
+    <li><strong>Focus Areas:</strong> Data Structures, Algorithms, Web Development, Artificial Intelligence, and Networking</li>
+    <li><strong>Projects:</strong> Developed academic and personal projects in HTML, CSS, JavaScript, and Python</li>
+    <li><strong>Activities:</strong>Participated in coding contests, seminars, and university tech events</li>
+    <li><strong>Website:</strong> <a href="https://www.muit.in" target="_blank">www.muit.in</a></li>
+  </ul>
+</section>
+>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+    </ul>
+  </section>
+
+ 
+
+     <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+    
+      <li><strong>Project :</strong>Recipe Finder Web App</li>
+
+    </ul>
+</section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Internship at Shikshart Company - Worked on frontend development using HTML , CSS and JavaScript.</p>
+    </section>
+     <section id="Certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li><strong>Coding Blocks Certificate:</strong></li>
+     </ul>
+    </section>
+ 
+
+  <section id="contact">
+  <h2>Contact</h2>
+
+  <p><i class="fas fa-envelope email"></i> <strong>Email:</strong> atulraj3316@gmail.com</p>
+  <p><i class="fas fa-phone phone"></i> <strong>Phone:</strong> +91 7985544065</p>
+  <p><i class="fab fa-linkedin linkedin"></i> <strong>LinkedIn:</strong>
+    <a href="https://www.linkedin.com/in/atul-raj-b8610036a/" target="_blank">Atulraj</a></p>
+  <p><i class="fab fa-github github"></i> <strong>GitHub:</strong>
+    <a href="https://github.com/Atulraj4547/atulraj" target="_blank">Atulraj4547</a></p>
+
+  
+<section id="get-in-touch">
+  <h2>Get in Touch</h2>
+  <form id="contact-form" action="https://script.google.com/macros/s/AKfycbzrZClYujznOXXpyaV1PoYYiT9CNUm9Ku_e_ACdH-dJlO5O4gangSj57LzD0KZpNuYf5g/exec" name="contact-form" method="POST">
+    <p><input type="text" name="name" placeholder="Your Name" required /></p>
+    <p><input type="email" name="email" placeholder="Your Email" required /></p>
+    <p><textarea name="message" rows="3" placeholder="Your Message" required></textarea></p>
+    <p><button type="submit">Send Message</button></p>
+  </form>
+</section>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzrZClYujznOXXpyaV1PoYYiT9CNUm9Ku_e_ACdH-dJlO5O4gangSj57LzD0KZpNuYf5g/exec'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  
+  e.preventDefault()
+  
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! Form is submitted" ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+</script>
+<footer>
+    <p>© 2025 Atul Raj.All rights Reserved </p>
+  </footer>
+   <script>
+  const toggleButton = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // Load saved theme from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");  // fixed space
+  }
+
+  toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    // Save preference
+    if (body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
+</script>
+</body>
+</html>
